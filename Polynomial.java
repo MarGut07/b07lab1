@@ -1,19 +1,24 @@
 public class Polynomial{
 
     double [] coefficients;
+    int [] exponents;
 
     public Polynomial(){
         coefficients = new double [1];
         coefficients[0] = 0.0;
+        exponents = new int [1]
+        exponents[0] = 0
     }
 
-    public Polynomial(double [] coefficients){
+    public Polynomial(double [] coefficients, int [] exponents){
         int length = coefficients.length;
 
         this.coefficients = new double [length];
+        this.exponents = new int [length];
 
         for(int i = 0; i<length; i++){
             this.coefficients[i] = coefficients[i];
+            this.exponents = exponents[i];
         }
     }
 
