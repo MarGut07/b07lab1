@@ -22,14 +22,15 @@ public class Polynomial{
         }
     }
 
-    public Polynomial add (Polynomial poly_arg){
+    public Polynomial add (Polynomial poly_arg){ 
+    	int [] max_lenght = new int[this.exponents.length + poly_arg.exponents.length];
+    	int i = 0;
         int length_arg  = poly_arg.coefficients.length;
         int length_call = this.coefficients.length;
         double [] result_coefficients;
 
         if(length_arg >= length_call){
             result_coefficients = new double[length_arg];
-            int i = 0;
             for(i = 0; i<length_call; i++){
                 result_coefficients[i] = this.coefficients[i] + poly_arg.coefficients[i];
             }
@@ -40,7 +41,6 @@ public class Polynomial{
         }
         else{
             result_coefficients = new double[length_call];
-            int i = 0;
             for(i = 0; i<length_arg; i++){
                 result_coefficients[i] = this.coefficients[i] + poly_arg.coefficients[i];
             }
