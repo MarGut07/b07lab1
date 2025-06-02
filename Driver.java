@@ -63,13 +63,10 @@ public class Driver{
             System.out.println("exponents "+p6.exponents[i]);
         }
 
-<<<<<<< HEAD
-=======
         p6.saveToFile("output.txt");
 
 
 
->>>>>>> 20575cf (modified Polynomial.java and Driver.java)
     }
 
 }
