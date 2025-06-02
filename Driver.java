@@ -33,31 +33,32 @@ public class Driver{
         Polynomial m = p5.multiply(p5);
         System.out.println("m(1.0)="+m.evaluate(1));
         if(m.hasRoot(-2))
-            System.out.println("-2 is a root of s");
+            System.out.println("-2 is a root of m");
         else
-            System.out.println("-2 is not a root of s");
+            System.out.println("-2 is not a root of m");
 
         m = p5.multiply(p3);
         System.out.println("m(-1)="+m.evaluate(-1));
         if(m.hasRoot(-2))
-            System.out.println("-2 is a root of s");
+            System.out.println("-2 is a root of m");
         else
-            System.out.println("-2 is not a root of s");
+            System.out.println("-2 is not a root of m");
 
         if(m.hasRoot(0))
-            System.out.println("0 is a root of s");
+            System.out.println("0 is a root of m");
         else
-            System.out.println("0 is not a root of s");
+            System.out.println("0 is not a root of m");
 
         File file = new File("Input_exp.txt");
 
         Polynomial p6 = new Polynomial(file);
-        System.out.println("s(0.1)="+p6.evaluate(0.1));
+        System.out.println("p6(0.1)="+p6.evaluate(0.1));
         if(p6.hasRoot(1))
-            System.out.println("1 is a root of s");
+            System.out.println("1 is a root of p6");
         else
-            System.out.println("1 is not a root of s");
+            System.out.println("1 is not a root of p6");
 
+        System.out.println("The Exponenst and coeficients of p6 are:");
         for(int i=0; i<4; i++){
             System.out.println("coefficient "+p6.coefficients[i]);
             System.out.println("exponents "+p6.exponents[i]);
@@ -65,6 +66,7 @@ public class Driver{
 
         p6.saveToFile("output.txt");
 
+        System.out.println("Check output text to compare with the shown above");
 
 
     }
